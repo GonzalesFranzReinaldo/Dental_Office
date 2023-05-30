@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imagen_registrar_cita"
+    tools:context=".ui.CreateCitasActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reservar Cita"
+            android:textSize="23sp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="25dp"/>
+
+
+
+
+<!--        PRIMER CARDVIEW-->
+<!--        android:visibility="gone"-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_siguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:cardCornerRadius="10dp"
+            android:elevation="8dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            app:contentPadding="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descripcion de la cita"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Especalidad"
+                    android:layout_marginTop="12dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_especialidades"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo de consulta"
+                    android:layout_marginTop="12dp"/>
+
+
+<!--                para radio bottons-->
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radio_examenDental"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Examen dental regular"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_limpiezaDental"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Limpieza dental"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_extraccionDental"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Extracciones dentales"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_tratamientoEncias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tratamiento de las encías"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_tratamientoOrtodoncia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tratamientos de ortodoncia"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_tratamientoCaries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tratamiento de caries"/>
+
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/btn_siguiente"
+                    android:layout_width="match_parent"
+                    android:text="Siguiente"
+                    android:textSize="18dp"
+                    android:backgroundTint="@color/teal_200"
+                    android:background="@drawable/edittext_custom"
+                    android:drawableRight="@drawable/ic_next"
+                    style="@style/NexButtom"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+<!--        SEGUNDO CARVIEW  -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_confirmar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            android:elevation="8dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            app:contentPadding="12dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Médico"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_medicos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fecha para la cita"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/et_fecha"
+                        android:onClick="onClickScheduledDate"
+                        android:inputType="date"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hora de atención"
+                        android:layout_marginTop="12dp"/>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <!--               LINEAR LAYOUT BOTTOMS IZQUIERDA-->
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/radio_group_izq"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+
+
+                        <!--               LINEAR LAYOUT BOTTOMS DERECHA-->
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/radio_group_der"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btn_confirmar"
+                        android:layout_width="match_parent"
+                        android:text="Confirmar"
+                        android:textSize="18dp"
+                        android:backgroundTint="@color/teal_200"
+                        android:background="@drawable/edittext_custom"
+                        android:drawableRight="@drawable/ic_send"
+                        style="@style/NexButtom"/>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

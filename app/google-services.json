@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "432633969851",
+    "project_id": "consultorio-dental-db5e5",
+    "storage_bucket": "consultorio-dental-db5e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432633969851:android:376d3c6cbc0d04f58c7d9e",
+        "android_client_info": {
+          "package_name": "com.aristidevs.appsis301"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5NDMr8khEaFVJ38G5OPaO2rmqyUt98q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
