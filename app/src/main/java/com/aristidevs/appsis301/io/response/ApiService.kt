@@ -24,7 +24,7 @@ interface ApiService {
 
 
     companion object Factory{
-        private const val BASE_URL = "http://192.168.136.79:8000/api/auth/"
+        private const val BASE_URL = "http://192.168.1.5:8000/api/auth/"
         fun  create(): ApiService{
             val retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)

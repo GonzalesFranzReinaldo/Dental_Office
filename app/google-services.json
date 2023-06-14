@@ -1,26 +1,44 @@
 {
   "project_info": {
-    "project_number": "432633969851",
-    "project_id": "consultorio-dental-db5e5",
-    "storage_bucket": "consultorio-dental-db5e5.appspot.com"
+    "project_number": "134108487202",
+    "project_id": "dentaloffice-e65be",
+    "storage_bucket": "dentaloffice-e65be.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:432633969851:android:376d3c6cbc0d04f58c7d9e",
+        "mobilesdk_app_id": "1:134108487202:android:dc365d3345e4f53db5b47b",
         "android_client_info": {
           "package_name": "com.aristidevs.appsis301"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "134108487202-eqmrb4qjo8srpud73n5guit1n7ds1ika.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aristidevs.appsis301",
+            "certificate_hash": "b6f608b41d7cca4fc5a5ebf0f02729a017ff9955"
+          }
+        },
+        {
+          "client_id": "134108487202-80u0lccho1fssonkd2lmuj3ps268b8cu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyB5NDMr8khEaFVJ38G5OPaO2rmqyUt98q0"
+          "current_key": "AIzaSyC-WjjkpRwUyDdVvXZul-CZP9XL9gpkNms"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134108487202-80u0lccho1fssonkd2lmuj3ps268b8cu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

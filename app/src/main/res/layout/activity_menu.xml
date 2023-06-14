@@ -22,9 +22,10 @@
             android:layout_marginTop="130dp"
             android:fontFamily="@font/login"
             android:gravity="center"
+            android:textStyle="bold"
             android:text="Inicio"
-            android:textColor="#00FF00"
-            android:textSize="60sp" />
+            android:textColor="#FF0000"
+            android:textSize="75sp" />
 
 
 
@@ -51,8 +52,9 @@
 
 
         <Button
+            android:id="@+id/btn_mis_consultas"
             android:layout_width="match_parent"
-            android:text="Mis Citas"
+            android:text="Mis Consultas"
             android:textSize="18dp"
             android:backgroundTint="@color/color_morado"
             android:background="@drawable/edittext_custom"
@@ -72,5 +74,257 @@
 
     </LinearLayout>
 
+
+
+    <!--    para el menu de opciones-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="#f6f6f6"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/home_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scrollbarSize="42dp"
+                        app:srcCompat="@drawable/btn_home" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1sp"
+                        android:text="Home"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/profile_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_informes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/btn_informes" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Informes"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_btn2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/support_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_tablero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/btn_tablero" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tablero"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_settings"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/btn_settings" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Settings"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#09AA8C"
+            android:elevation="3dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/baseline_add"
+            app:backgroundTint="#09AA8C"
+            app:layout_anchor="@id/app_bar"
+            app:maxImageSize="40dp"
+            app:tint="#ffffff">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_perfilClinica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:backgroundTint="#09AA8C"
+            android:visibility="invisible"
+            android:elevation="3dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginLeft="120dp"
+            android:layout_marginBottom="130dp"
+            android:src="@drawable/btn_perfil_clinica"
+            app:backgroundTint="#09AA8C"
+            app:layout_anchor="@id/app_bar"
+            app:maxImageSize="30dp"
+            app:tint="#ffffff">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <TextView
+            android:id="@+id/tv_dental"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Dental"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="123dp"
+            android:layout_marginBottom="107dp"/>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:backgroundTint="#09AA8C"
+            android:visibility="invisible"
+            android:elevation="3dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_anchorGravity="center|top"
+            android:layout_marginBottom="130dp"
+            android:src="@drawable/btn_usuario"
+            app:backgroundTint="#09AA8C"
+            app:layout_anchor="@id/app_bar"
+            app:maxImageSize="30dp"
+            app:tint="#ffffff">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_gravity="bottom"
+            android:text="User"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="188dp"
+            android:layout_marginBottom="107dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:backgroundTint="#09AA8C"
+            android:visibility="invisible"
+            android:elevation="3dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginLeft="242dp"
+            android:layout_marginBottom="130dp"
+            android:src="@drawable/btn_book"
+            app:backgroundTint="#09AA8C"
+            app:layout_anchor="@id/app_bar"
+            app:maxImageSize="30dp"
+            app:tint="#ffffff">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <TextView
+            android:id="@+id/tv_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="invisible"
+            android:text="Book"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="248dp"
+            android:layout_marginBottom="107dp"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

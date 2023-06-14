@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_login"
+    android:layout_marginBottom="44dp"
+    tools:context=".ui.AuthActivity">
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="TE DAMOS LA BIENVENIDA A NUESTRO APLICACIÓN MÓVIL"
+    android:textStyle="bold"
+    android:textSize="40dp"
+        android:fontFamily="@font/correo_contrasena"
+        android:textColor="#0000FF"
+    android:layout_marginTop="103dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puedes iniciar sesion con Email"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical"
+        android:textSize="31dp"
+        android:fontFamily="@font/correo_contrasena"
+        android:textColor="#ffff"
+        android:layout_marginTop="463dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="25dp"/>
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="45dp"
+        android:layout_marginRight="288dp"
+        android:src="@drawable/google_logo"/>
+
+    <Button
+        android:id="@+id/loginGoogle"
+        android:layout_width="254dp"
+        android:layout_height="74dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="34dp"
+        android:layout_marginLeft="34dp"
+        android:text="Inicia sesion con Google"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:backgroundTint="#ffff"
+        />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

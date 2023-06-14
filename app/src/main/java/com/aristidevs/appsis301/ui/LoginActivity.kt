@@ -49,7 +49,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-
     //funciones metodos para llamadas
     private fun goToRegister(){
         val i = Intent(this, RegisterActivity::class.java)
@@ -113,6 +112,8 @@ class LoginActivity : AppCompatActivity() {
 
         })
     }
+
+
 }
 
 

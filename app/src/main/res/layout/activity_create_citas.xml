@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearlayout_create_cita"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/imagen_registrar_cita"
@@ -19,7 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Reservar Cita"
-            android:textSize="23sp"
+            android:fontFamily="@font/login"
+            android:textSize="33sp"
             android:layout_gravity="center_horizontal"
             android:textStyle="bold"
             android:layout_marginTop="25dp"
@@ -37,7 +39,7 @@
             android:layout_height="wrap_content"
             android:visibility="visible"
             app:cardCornerRadius="10dp"
-            android:elevation="8dp"
+            android:elevation="28dp"
             android:layout_marginRight="25dp"
             android:layout_marginLeft="25dp"
             app:contentPadding="12dp">
@@ -50,9 +52,13 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Descripcion de la cita"/>
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textColor="#0000FF"
+                    android:text="Descripcion de la Cita"/>
 
                 <EditText
+                    android:id="@+id/et_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
@@ -76,8 +82,10 @@
 
 <!--                para radio bottons-->
                 <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/radio_group_type"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:checkedButton="@id/radio_examenDental"
                     android:orientation="vertical">
 
                     <RadioButton
@@ -145,7 +153,7 @@
             android:layout_height="wrap_content"
             android:visibility="gone"
             app:cardCornerRadius="10dp"
-            android:elevation="8dp"
+            android:elevation="28dp"
             android:layout_marginRight="25dp"
             android:layout_marginLeft="25dp"
             app:contentPadding="12dp">
@@ -162,7 +170,10 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Médico"/>
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:textColor="#0000FF"
+                        android:text="Doctor"/>
 
                     <Spinner
                         android:id="@+id/spinner_medicos"
@@ -225,6 +236,184 @@
 
 
                     <Button
+                        android:id="@+id/btn_siguiente2"
+                        android:layout_width="match_parent"
+                        android:text="Siguiente"
+                        android:textSize="18dp"
+                        android:backgroundTint="@color/teal_200"
+                        android:background="@drawable/edittext_custom"
+                        android:drawableRight="@drawable/ic_next"
+                        style="@style/NexButtom"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+        <!--        TERCER CARVIEW  -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_resumenCitas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="185dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            android:elevation="28dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            app:contentPadding="20dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:textColor="#0000FF"
+                        android:text="Datos de la Cita"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Médico: "
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_resumenMedico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dor. Gonzales"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Especialidad: "
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_resumenEspecialidad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ortodoncista"/>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fecha para la Cita: "
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_resumenFecha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="16/10/2023"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hora para la Cita: "
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_resumenHora"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10:00 AM"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tipo de Consulta: "
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_resumenTipoConsulta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Consulta personal"/>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Descripcion: "
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_resumenDescripcion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Solicito realizar una cita de limpieza dental"/>
+
+                    </LinearLayout>
+
+
+
+                    <Button
                         android:id="@+id/btn_confirmar"
                         android:layout_width="match_parent"
                         android:text="Confirmar"
@@ -233,13 +422,21 @@
                         android:background="@drawable/edittext_custom"
                         android:drawableRight="@drawable/ic_send"
                         style="@style/NexButtom"/>
-
                 </LinearLayout>
-
             </androidx.core.widget.NestedScrollView>
-
         </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_volverMenu"
+            android:layout_width="232dp"
+            android:visibility="gone"
+            android:layout_height="60dp"
+            android:textSize="20dp"
+            android:backgroundTint="@color/teal_200"
+            android:text="Volver al Menu"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="120dp"/>
 
     </LinearLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>
