@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doctor:"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/color_morado"
+            android:textStyle="bold"
+            android:textSize="22dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:padding="2dp"
+            android:id="@+id/nombre"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Especialidad"
+            android:padding="2dp"
+            android:id="@+id/especialidad"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono"
+            android:padding="2dp"
+            android:id="@+id/telefono"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electrónico"
+            android:id="@+id/correo_electronico"
+            android:padding="2dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Direccion"
+            android:id="@+id/direccion"
+            android:padding="2dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Presioname"
+            android:textSize="18dp"
+            android:backgroundTint="@color/teal_200"
+            android:id="@+id/bottom_1"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

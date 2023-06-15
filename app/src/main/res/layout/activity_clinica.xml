@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,150 +7,139 @@
     tools:context=".ui.ClinicaActivity"
     android:background="@drawable/background">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="411dp"
-        android:layout_height="308dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dentist"
-        android:contentDescription="cosa"
-        />
-
-    <TextView
-        android:id="@+id/titulo1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/constraintlayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="1sp"
-        android:layout_marginTop="108dp"
-        android:background="@color/white"
-        android:fontFamily="@font/bebasneuebold"
-        android:gravity="center"
-        android:text="CLINICA DENTAL: NOMBRE DE PRUEBA"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/titulo2"
-        android:layout_width="250sp"
-        android:layout_height="40sp"
-        android:layout_marginTop="104dp"
-        android:fontFamily="@font/bebasneuebold"
-        android:gravity="center"
-        android:text="@string/app_nombre"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo1" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="308dp"
+            android:contentDescription="cosa"
+            app:srcCompat="@drawable/dentist" />
 
-    <TextView
-        android:id="@+id/texto1"
-        android:layout_width="387dp"
-        android:layout_height="116dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/bebasneuebold"
-        android:gravity="center"
-        android:text="@string/clinic_description"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo2"
+        <TextView
+            android:id="@+id/titulo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fontFamily="@font/bebasneuebold"
+            android:gravity="center"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="CLINICA DENTAL: NOMBRE DE PRUEBA"
+            android:textColor="@color/black"
+            android:textSize="45sp"/>
 
-        />
+        <TextView
+            android:id="@+id/titulo2"
+            android:layout_width="250sp"
+            android:layout_height="40sp"
+            android:fontFamily="@font/bebasneuebold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@string/app_nombre"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp" />
 
-
-    <TextView
-        android:id="@+id/texto2"
-        android:layout_width="250sp"
-        android:layout_height="40sp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/bebasneuebold"
-        android:gravity="center"
-        android:text="@string/clinic_owner"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texto1"
-
-        />
-
-    <TextView
-        android:id="@+id/texto3"
-        android:layout_width="380dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/bebasneuebold"
-        android:gravity="center"
-        android:text="@string/clinic_email"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texto2"
-        />
+        <TextView
+            android:id="@+id/texto1"
+            android:layout_width="387dp"
+            android:layout_height="116dp"
+            android:fontFamily="@font/bebasneuebold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@string/clinic_description"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp" />
 
 
-    <TextView
-        android:id="@+id/texto4"
-        android:layout_width="380dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texto3"
-        android:gravity="center"
-        android:text="@string/clinic_phone"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:fontFamily="@font/bebasneuebold"
-        />
+        <TextView
+            android:id="@+id/texto2"
+            android:layout_width="250sp"
+            android:layout_height="40sp"
+            android:fontFamily="@font/bebasneuebold"
+            android:gravity="center"
+            android:text="@string/clinic_owner"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+             />
+
+        <TextView
+            android:id="@+id/texto3"
+            android:layout_width="380dp"
+            android:layout_height="38dp"
+            android:fontFamily="@font/bebasneuebold"
+            android:gravity="center"
+            android:text="@string/clinic_email"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
 
 
-
-    <TextView
-        android:id="@+id/texto5"
-        android:layout_width="380dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texto4"
-        android:gravity="center"
-        android:text="@string/clinic_location"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:fontFamily="@font/bebasneuebold"
-        />
+        <TextView
+            android:id="@+id/texto4"
+            android:layout_width="380dp"
+            android:layout_height="38dp"
+            android:fontFamily="@font/bebasneuebold"
+            android:gravity="center"
+            android:text="@string/clinic_phone"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            />
 
 
-    <Button
-        android:id="@+id/btnvermapa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/bebasneuebold"
-        android:text="Ver Mapa"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="@color/purple_500"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texto5" />
+        <TextView
+            android:id="@+id/texto5"
+            android:layout_width="380dp"
+            android:layout_height="38dp"
+            android:fontFamily="@font/bebasneuebold"
+            android:gravity="center"
+            android:text="@string/clinic_location"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnvermapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            android:fontFamily="@font/bebasneuebold"
+            android:text="Ver Mapa"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctores Especialistas:"
+            android:textColor="@color/teal_200"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="772dp" />
+
+    </LinearLayout>
+
+
+</ScrollView>
 

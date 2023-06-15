@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
 
 
         btn_Iniciar.setOnClickListener(){
-            //val iniciar = Intent(this, AuthActivity::class.java)
-            val iniciar = Intent(this, MenuActivity::class.java)
+            val iniciar = Intent(this, AuthActivity::class.java)
+            //val iniciar = Intent(this, MenuActivity::class.java)
             startActivity(iniciar)
         }
 
