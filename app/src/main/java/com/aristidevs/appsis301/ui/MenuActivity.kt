@@ -106,7 +106,9 @@ class MenuActivity : AppCompatActivity() {
         }
 
         btn_perfilClinica.setOnClickListener{
-            Toast.makeText(this, "Botón edit pulsado", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@MenuActivity, ClinicaActivity::class.java)
+            //.makeText(this, "Clinica Dental", Toast.LENGTH_SHORT).show()
+            startActivity(intent)
         }
         btn_user.setOnClickListener{
             val intent = Intent(this@MenuActivity, PerfilActivity::class.java)
@@ -129,7 +131,15 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+
     }
+
+
+
+
+
+
 
     private fun onAddButtomClicked(){
         setVisibility(clicked)
