@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_pantalla"
+    android:background="@drawable/fondo1"
     tools:context=".ui.MenuActivity">
 
 
@@ -24,7 +24,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:text="Inicio"
-            android:textColor="#2FFF00"
+            android:textColor="#FF0000"
             android:textSize="75sp" />
 
 
@@ -90,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:backgroundTint="#D5ECE2"
+            android:backgroundTint="#f6f6f6"
             app:fabCradleMargin="8dp"
             app:fabCradleRoundedCornerRadius="50dp"
             app:fabCradleVerticalOffset="6dp">

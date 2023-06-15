@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
             val iniciar = Intent(this, AuthActivity::class.java)
             //val iniciar = Intent(this, MenuActivity::class.java)
             startActivity(iniciar)
+
+
         }
 
         val analitycs = FirebaseAnalytics.getInstance(this)
