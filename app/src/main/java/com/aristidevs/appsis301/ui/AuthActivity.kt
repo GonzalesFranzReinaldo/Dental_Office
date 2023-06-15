@@ -1,10 +1,10 @@
 package com.aristidevs.appsis301.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.aristidevs.appsis301.R
 import com.aristidevs.appsis301.databinding.ActivityAuthBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -13,8 +13,6 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuth.AuthStateListener
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 
 class AuthActivity : AppCompatActivity() {
     //comenzar a declarar
@@ -33,7 +31,6 @@ class AuthActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //firebaseAuth = Firebase.auth
-
 
        // inicializar
         mAuth = FirebaseAuth.getInstance()
@@ -82,6 +79,7 @@ class AuthActivity : AppCompatActivity() {
             val googleClient = GoogleSignIn.getClient(this, googleConf)
             val signInIntent = googleClient.signInIntent
             startActivityForResult(signInIntent, Google_SIGN_IN)
+
         }
     }
 

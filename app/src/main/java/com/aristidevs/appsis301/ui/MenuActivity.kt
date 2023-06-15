@@ -114,6 +114,12 @@ class MenuActivity : AppCompatActivity() {
             Toast.makeText(this, "Perfil del usuario", Toast.LENGTH_SHORT).show()
         }
 
+        btn_book.setOnClickListener{
+            val intent = Intent(this@MenuActivity, bookActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Diccionario", Toast.LENGTH_SHORT).show()
+        }
+
 
         //para los informes
         val informes = findViewById<ImageView>(R.id.iv_informes)

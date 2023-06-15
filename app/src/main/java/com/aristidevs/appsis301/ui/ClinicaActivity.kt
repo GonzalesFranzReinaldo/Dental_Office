@@ -1,8 +1,13 @@
 package com.aristidevs.appsis301.ui
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Button
+import android.widget.Toast
 import com.aristidevs.appsis301.R
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -13,6 +18,19 @@ class ClinicaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clinica)
+
+        val btnmap= findViewById<Button>(R.id.btnvermapa) as Button
+
+        btnmap.setOnClickListener() {
+
+            val gmmIntentUri = Uri.parse("https://goo.gl/maps/eqPihs9Ap4fv4qHaA") // Cambia la URL según el enlace de Google Maps que deseas abrir
+            val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+            mapIntent.setPackage("com.google.android.apps.maps")
+        }
+
+
+        }
+
 
 
         //agregarDatos()
@@ -47,4 +65,3 @@ class ClinicaActivity : AppCompatActivity() {
 //            .addOnSuccessListener { Log.d("TAG", "Se guardo correctamente") }
 //            .addOnFailureListener { e -> Log.w("TAG", "error $e") }
 //    }
-}

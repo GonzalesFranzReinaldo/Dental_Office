@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">AppSIS301</string>
     <string name="date_format">%1$d-%2$s-%3$s</string>
+    <string name="app_nombre">Nombre de la Clínica Dental</string>
+    <string name="clinic_title">Clínica Dental Sonrisa Saludable</string>
+    <string name="clinic_description">En Clínica Dental Sonrisa Saludable, nos dedicamos a brindar atención dental de calidad en un ambiente cálido y acogedor. Nuestro equipo de profesionales altamente capacitados se preocupa por tu salud bucal y trabaja para brindarte una sonrisa radiante y saludable. Ofrecemos una amplia gama de servicios dentales, desde limpiezas y revisiones regulares hasta tratamientos de ortodoncia, implantes dentales y estética dental. Tu salud bucal es nuestra prioridad número uno.</string>
+    <string name="clinic_email">info: SonrisaSaludable@clinicadental.com</string>
+    <string name="clinic_phone">Teléfono: 123-456-7890</string>
+    <string name="clinic_location">Ubicación: Calle Principal #123, Ciudad, País</string>
+    <string name="clinic_owner">Dueño: Dr. Juan Pérez</string>
+
+
+
+
 </resources>
