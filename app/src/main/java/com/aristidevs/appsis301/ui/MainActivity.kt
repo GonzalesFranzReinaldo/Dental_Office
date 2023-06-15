@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
         val btn_Iniciar = findViewById<Button>(R.id.buttonIniciar) as Button
 
         btn_Iniciar.setOnClickListener(){
-            val iniciar = Intent(this, AuthActivity::class.java)
+            //val iniciar = Intent(this, AuthActivity::class.java)
+            val iniciar = Intent(this, MenuActivity::class.java)
             startActivity(iniciar)
         }
 
@@ -40,68 +41,39 @@ class MainActivity : AppCompatActivity() {
         analitycs.logEvent("MainActivity",bundle)
 
 
-        agregarDatos()
+        //agregarDatos()
 
     }
 
 //    private  fun agregarDatos(){
-//        val user = hashMapOf(
-//            "first" to "juan",
-//            "last" to "vargas",
-//            "born" to 2000
+//        val doctor = hashMapOf(
+//            "nombre" to "dr. Jose",
+//            "apellido" to "vargas",
+//            "especialidad" to "ortodoncia",
+//            "correo" to "josevargas@gmail.com",
+//            "telefono" to 72838232
 //        )
 //        //primer metodo
-//        db.collection("usuarios")
-//            .add(user)
+//        db.collection("doctores")
+//            .add(doctor)
 //            .addOnSuccessListener { documentReference ->
 //                Log.d("TAG", documentReference.id)
 //            }
 //            .addOnFailureListener { e ->
 //                Log.w("TAG", "error $e")
 //            }
-//
 //        //segundo metodo
-//        db.collection("usuarios").document()
-//            .set(user)
+//        db.collection("doctores").document()
+//            .set(doctor)
 //            .addOnSuccessListener { Log.d("TAG", "Se guardo correctamente") }
 //            .addOnFailureListener { e -> Log.w("TAG", "error $e") }
 //
 //        //tercer metodo
-//        db.collection("usuarios").document("noman")
-//            .set(user)
+//        db.collection("doctores").document("name")
+//            .set(doctor)
 //            .addOnSuccessListener { Log.d("TAG", "Se guardo correctamente") }
 //            .addOnFailureListener { e -> Log.w("TAG", "error $e") }
 //    }
-
-    private  fun agregarDatos(){
-        val doctor = hashMapOf(
-            "nombre" to "dr. Jose",
-            "apellido" to "vargas",
-            "especialidad" to "ortodoncia",
-            "correo" to "josevargas@gmail.com",
-            "telefono" to 72838232
-        )
-        //primer metodo
-        db.collection("doctores")
-            .add(doctor)
-            .addOnSuccessListener { documentReference ->
-                Log.d("TAG", documentReference.id)
-            }
-            .addOnFailureListener { e ->
-                Log.w("TAG", "error $e")
-            }
-        //segundo metodo
-        db.collection("doctores").document()
-            .set(doctor)
-            .addOnSuccessListener { Log.d("TAG", "Se guardo correctamente") }
-            .addOnFailureListener { e -> Log.w("TAG", "error $e") }
-
-        //tercer metodo
-        db.collection("doctores").document("name")
-            .set(doctor)
-            .addOnSuccessListener { Log.d("TAG", "Se guardo correctamente") }
-            .addOnFailureListener { e -> Log.w("TAG", "error $e") }
-    }
 
 }
 

@@ -1,11 +1,10 @@
 package com.aristidevs.appsis301.ui
 
-import android.content.Intent
-import android.net.Uri
-import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
 import com.aristidevs.appsis301.R
+import com.google.firebase.firestore.FirebaseFirestore
 
 class ClinicaActivity : AppCompatActivity() {
 
@@ -14,21 +13,6 @@ class ClinicaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clinica)
-
-        val btnmap= findViewById<Button>(R.id.btnvermapa) as Button
-
-        btnmap.setOnClickListener() {
-
-            val intent = Intent(
-                Intent.ACTION_VIEW,
-                Uri.parse("https://goo.gl/maps/eqPihs9Ap4fv4qHaA")
-            )
-            startActivity(intent)
-        }
-
-
-        }
-
 
 
         //agregarDatos()
@@ -63,3 +47,4 @@ class ClinicaActivity : AppCompatActivity() {
 //            .addOnSuccessListener { Log.d("TAG", "Se guardo correctamente") }
 //            .addOnFailureListener { e -> Log.w("TAG", "error $e") }
 //    }
+}
