@@ -19,13 +19,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="130dp"
-            android:fontFamily="@font/login"
+            android:layout_marginTop="140dp"
             android:gravity="center"
-            android:textStyle="bold"
+            android:fontFamily="@font/bebasneuebold"
             android:text="Inicio"
-            android:textColor="#FF0000"
-            android:textSize="75sp" />
+            android:textColor="#F1F1F1"
+            android:textSize="100sp" />
 
 
 
