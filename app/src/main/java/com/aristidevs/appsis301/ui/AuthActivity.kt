@@ -80,6 +80,10 @@ class AuthActivity : AppCompatActivity() {
             val signInIntent = googleClient.signInIntent
             startActivityForResult(signInIntent, Google_SIGN_IN)
 
+
+            val intent = Intent(this@AuthActivity, ClinicaActivity::class.java)
+            startActivity(intent)
+
         }
     }
 
