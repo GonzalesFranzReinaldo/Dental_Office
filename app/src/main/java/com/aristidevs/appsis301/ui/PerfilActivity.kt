@@ -26,15 +26,15 @@ class PerfilActivity : AppCompatActivity() {
         gsc = GoogleSignIn.getClient(this@PerfilActivity, gso)
 
         val account: GoogleSignInAccount? = GoogleSignIn.getLastSignedInAccount(this@PerfilActivity)
-        if (account != null) {
-            val name = account.displayName
-            val email = account.email
-            val textNombre: TextView = findViewById(R.id.textname)
-            val textCorreo: TextView = findViewById(R.id.textcorreo)
-            textNombre.text = name
-            textCorreo.text = email
-
-        }
+//        if (account != null) {
+//            val name = account.displayName
+//            val email = account.email
+//            val textNombre: TextView = findViewById(R.id.textname)
+//            val textCorreo: TextView = findViewById(R.id.textcorreo)
+//            textNombre.text = name
+//            textCorreo.text = email
+//
+//        }
 
     }
 
