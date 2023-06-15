@@ -129,7 +129,20 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        //para bottom del perfil de la clinica
+        btn_perfilClinica.setOnClickListener {
+            val intent = Intent(this@MenuActivity, ClinicaActivity::class.java)
+            startActivity(intent)
+        }
+
     }
+
+
+
+
+
+
 
     private fun onAddButtomClicked(){
         setVisibility(clicked)

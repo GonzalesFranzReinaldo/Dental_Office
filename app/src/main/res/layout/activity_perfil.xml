@@ -7,6 +7,11 @@
     android:background="@drawable/back2"
     tools:context=".ui.PerfilActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hisaos"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/textView"
